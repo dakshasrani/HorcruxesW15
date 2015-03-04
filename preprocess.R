@@ -27,7 +27,7 @@ area <- as.numeric(df$area)
 # create the train data with one soil and one cover
 cover <- train.raw$Cover_Type
 
-remove.attributes <- c('Id', soils, areas, 'Cover_Type')
+remove.attributes <- c(soils, areas, 'Cover_Type')
 # train.data <- subset(train.raw, select = -remove.attributes)
 train.data <- train.raw[, !(names(train.raw) %in% remove.attributes)]
 train.data$Soil_Type <- soil
